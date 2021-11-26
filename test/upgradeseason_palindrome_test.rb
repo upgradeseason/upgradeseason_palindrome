@@ -22,4 +22,11 @@ class UpgradeseasonPalindromeTest < Minitest::Test
     assert "123321".palindrome?
   end
 
+  def test_integer_palindrome
+    assert 123321.palindrome?
+  end
+
+  def test_integer_nonpalindrome
+    refute 24222.palindrome?
+  end
 end

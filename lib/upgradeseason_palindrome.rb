@@ -2,7 +2,7 @@ require "upgradeseason_palindrome/version"
 
 class String
   def processor(phrase)
-    to_s.scan(/[a-z]/i).join.downcase
+    to_s.scan(/[a-z0-9]/i).join.downcase
   end
 
   # Returns true for a palindrome, false otherwise.
@@ -25,6 +25,8 @@ class String
     end
   end
 
+class Integer
+end
 
   private
 
